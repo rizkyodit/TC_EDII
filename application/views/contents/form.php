@@ -29,7 +29,7 @@
   <h1 class="d-flex justify-content-center" style="text-decoration:underline">Data Pribadi Pelamar</h1>
   <hr>
   <?php if (isset($action) && $action != 'show') { ?>
-    <form action="<?php echo isset($action) && $action == 'update' ? 'EntryData/update/' . $id : 'EntryData/insert' ?>" method="post">
+    <form action="<?php echo isset($action) && $action == 'update' ? base_url('EntryData/update/') . $id : base_url('EntryData/insert') ?>" method="post">
     <?php } ?>
     <input <?php echo isset($action) && $action == 'show' ? 'readonly' : '' ?> type="text" name="id_user" value="<?php echo isset($id_user) ? $id_user : '' ?>" hidden>
     <div>
@@ -69,11 +69,11 @@
     </div>
     <div>
       <label for="alamat_ktp">ALAMAT KTP</label>
-      <textarea rows="4" cols="65" maxlength="200" style="border-radius: 5px;" <?php echo isset($action) && $action == 'show' ? 'readonly' : '' ?> type="text" name="alamat_ktp" value="<?php echo isset($alamat_ktp) ? $alamat_ktp : '' ?>"></textarea>
+      <textarea rows="4" cols="65" maxlength="200" style="border-radius: 5px;" <?php echo isset($action) && $action == 'show' ? 'readonly' : '' ?> type="text" name="alamat_ktp" value="<?php echo isset($alamat_ktp) ? $alamat_ktp : '' ?>"><?php echo isset($alamat_ktp) ? $alamat_ktp : '' ?></textarea>
     </div>
     <div>
       <label for="alamat_tinggal">ALAMAT TINGGAL</label>
-      <textarea rows="4" cols="65" maxlength="200" style="border-radius: 5px;" <?php echo isset($action) && $action == 'show' ? 'readonly' : '' ?> type="text" name="alamat_tinggal" value="<?php echo isset($alamat_tinggal) ? $alamat_tinggal : '' ?>"></textarea>
+      <textarea rows="4" cols="65" maxlength="200" style="border-radius: 5px;" <?php echo isset($action) && $action == 'show' ? 'readonly' : '' ?> type="text" name="alamat_tinggal" value="<?php echo isset($alamat_tinggal) ? $alamat_tinggal : '' ?>"><?php echo isset($alamat_tinggal) ? $alamat_tinggal : '' ?></textarea>
     </div>
     <div>
       <label for="email">EMAIL</label>
